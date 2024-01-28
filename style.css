@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(45deg, rgb(93, 64, 145),rgb(94, 33, 33));
+}
+.clock{
+    position: relative;
+    height: 250px;
+    width: 250px;
+
+}
+.circle{
+    height: 100%;
+    width: 100%;
+    border: 8px solid white;
+    border-radius: 50%;
+    box-shadow: 0 0 5px #c57d7d, 0 0 10px #c57d7d,0 0 15px #b91a1a;
+}
+.hand{
+    position: absolute;
+    left: 51%;
+    bottom: 47%;
+    transform-origin: 50% 100%;
+    transform : rotate(90deg);
+}
+.hour-hand{
+    width: 5px;
+    height: 35%;
+    background: #000;
+    z-index: 3;
+    border-radius: 50px;
+}
+.minute-hand{
+    width: 5px;
+    height: 43%;
+    background: #605454;
+    z-index: 2;
+    border-radius: 50px;
+}
+.seconds-hand{
+    width: 5px;
+    height: 48%;
+    background: #9ba74d;
+    z-index: 1;
+    border-radius: 50px;
+}
+.number{
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 56%;
+    left: 56%;
+    font-weight: bold ;
+    transform: translate(-50%, -50%) rotate(var(--angle)) translateY(-110px) rotate(calc(-1 * var(--angle)));
+}
+.creator{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    font-style: oblique;
+    align-self: flex-end;
+    margin-bottom: 100px;
+    margin-left: 100px;
+}
